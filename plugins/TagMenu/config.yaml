@@ -2,7 +2,7 @@ id  : TagMenu
 key : tagmenu
 name: Tag Menu
 version: 1.0
-description: '<__trans phrase="Show menu 'Tags' for entry, page and asset.">'
+description: '<__trans phrase="Show menu &quot;Tags&quot; for entry, page and asset.">'
 l10n_class: TagMenu::L10N
 callbacks:
     MT::App::CMS::template_param.list_common: $tagmenu::TagMenu::Plugin::_list_tag_param
