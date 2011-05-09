@@ -1,0 +1,43 @@
+id  : TagMenu
+key : tagmenu
+name: Tag Menu
+version: 1.0
+description: '<__trans phrase="Show menu 'Tags' for entry, page and asset.">'
+l10n_class: TagMenu::L10N
+callbacks:
+    MT::App::CMS::template_param.list_common: $tagmenu::TagMenu::Plugin::_list_tag_param
+applications:
+    cms:
+        menus:
+            entry:edit_tags:
+                label: Tags
+                mode: list
+                args:
+                    _type: tag
+                    filter_key: entry
+                order: 700
+                view:
+                    - blog
+                permission: edit_tags
+            page:edit_tags:
+                label: Tags
+                mode: list
+                args:
+                    _type: tag
+                    filter_key: page
+                order: 700
+                view:
+                    - website
+                    - blog
+                permission: edit_tags
+            asset:edit_tags:
+                label: Tags
+                mode: list
+                args:
+                    _type: tag
+                    filter_key: asset
+                order: 700
+                view:
+                    - website
+                    - blog
+                permission: edit_tags
